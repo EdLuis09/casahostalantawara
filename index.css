@@ -5,31 +5,191 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
-/*------------------------*/
-/*------------------------*/
-/*------------------------*/
+/*----------------------
+--- Fin Formato raiz ---
+----------------------*/
 
 /*---------------
 --- Variables ---
 ---------------*/
 :root {
-    --color-primary: #ff0000;
-    --color-secondary: #00ff00;
+    --color-bkg: #ff0000;
+    --color-btn: #00ff00;
+    --color-text: #000;
     --color-tertiary: #0000ff;
 }
-/*--------------*/
-/*--------------*/
-/*--------------*/
+/*-------------------
+--- Fin Variables ---
+-------------------*/
+
+/*------------------
+--- Formato Cuerpo ---
+------------------*/
+body {
+    background-color: var(--color-bkg);
+    color: var(--color-text);
+}
+
+h1,h2,h3,h4 {
+    font-family: Merryweather, serif;
+}
+
+p {
+    font-family: Quicksand;
+}
+/*----------------------
+--- Fin Formato Cuerpo ---
+----------------------*/
+
 
 /*--------------
 --- Modulo 1 ---
 --------------*/
-header {
-    
-}
+/* - Estilos Mobile - */
+/* Header */
+/* Fin Header */
 
-/*------------*/
-/*------------*/
-/*------------*/
+/* Hero */
+/* Fin Hero */
+/* - Fin Estilos Mobile - */
+
+/* - Estilos Landscape / Tablets - */
+/* Header */
+/* Fin Header */
+
+/* Hero */
+/* Fin Hero */
+/* - Fin Estilos Landscape / Tablets - */
+
+
+/* - Estilos Desktop - */
+/* Header */
+/* Fin Header */
+
+/* Hero */
+/* Fin Hero */
+/* - Fin Estilos Desktop - */
+/*--------------
+- fin modulo 1 -
+--------------*/
+
+/*--------------
+--- Modulo 2 ---
+--------------*/
+/* - Estilos Mobile - */
+/* Nosotros */
+/* Fin Nosotros */
+
+/* Por que elegirnos */
+/* Fin Por que elegirnos */
+
+/* Que actividades Hacer */
+/* Fin actividades Hacer */
+
+/* habitaciones */
+/* Fin habitaciones */
+/* - Fin Estilos Mobile - */
+
+/* - Estilos Landscape / Tablets - */
+/* Nosotros */
+/* Fin Nosotros */
+
+/* Por que elegirnos */
+/* Fin Por que elegirnos */
+
+/* Que actividades Hacer */
+/* Fin actividades Hacer */
+
+/* habitaciones */
+/* Fin habitaciones */
+/* - Fin Estilos Landscape / Tablets - */
+
+
+/* - Estilos Desktop - */
+/* Nosotros */
+/* Fin Nosotros */
+
+/* Por que elegirnos */
+/* Fin Por que elegirnos */
+
+/* Que actividades Hacer */
+/* Fin actividades Hacer */
+
+/* habitaciones */
+/* Fin habitaciones */
+/* - Fin Estilos Desktop - */
+/*--------------
+- fin modulo 2 -
+--------------*/
+
+/*--------------
+--- Modulo 3 ---
+--------------*/
+/* - Estilos Mobile - */
+/* Experiencias */
+/* Fin Experiencias */
+
+/* Galería */
+/* Fin Galería */
+
+/* Reseñas */
+/* Fin Reseñas */
+/* - Fin Estilos Mobile - */
+
+/* - Estilos Landscape / Tablets - */
+/* Experiencias */
+/* Fin Experiencias */
+
+/* Galería */
+/* Fin Galería */
+
+/* Reseñas */
+/* Fin Reseñas */
+/* - Fin Estilos Landscape / Tablets - */
+
+
+/* - Estilos Desktop - */
+/* Experiencias */
+/* Fin Experiencias */
+
+/* Galería */
+/* Fin Galería */
+
+/* Reseñas */
+/* Fin Reseñas */
+/* - Fin Estilos Desktop - */
+/*--------------
+- fin modulo 3 -
+--------------*/
+
+
+/*--------------
+--- Modulo 4 ---
+--------------*/
+/* - Estilos Mobile - */
+/* Ubicación */
+/* Fin Ubicación */
+
+/* Footer */
+/* Fin Footer */
+/* - Fin Estilos Mobile - */
+
+/* - Estilos Landscape / Tablets - */
+/* Ubicación */
+/* Fin Ubicación */
+
+/* Footer */
+/* Fin Footer */
+/* - Fin Estilos Landscape / Tablets - */
+
+/* - Estilos Desktop - */
+/* Ubicación */
+/* Fin Ubicación */
+
+/* Footer */
+/* Fin Footer */
+/* - Fin Estilos Desktop - */
+/*--------------
+- fin modulo 4 -
+--------------*/
