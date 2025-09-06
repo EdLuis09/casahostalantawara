@@ -307,7 +307,7 @@ MENÚ MÓVIL
     top: 100%;
     left: 0;
     width: 50%; /* 50% del ancho como se pidió */
-    height: 80dvh;
+    height: 100dvh;
     background: #FF8C42; /* Fondo naranja */
     z-index: 999;
     padding: 1rem 0.5rem;
@@ -454,7 +454,8 @@ BREAKPOINTS RESPONSIVE
     }
     
     .nav-mobile {
-        width: 40%; /* Reducir ancho en tablets */
+        width: 40%;
+        height: 80vh; /* Reducir ancho en tablets */
     }
     
     .lang-current {
@@ -499,6 +500,10 @@ BREAKPOINTS RESPONSIVE
         width: 70px;
         height: 70px;
     }
+
+    .nav-mobile{
+        display: none;
+    }
 }
 
 /* LARGE DESKTOP (1440px+) */
@@ -514,6 +519,10 @@ BREAKPOINTS RESPONSIVE
     .logo-img {
         width: 80px;
         height: 80px;
+    }
+
+    .nav-mobile{
+        display: none;
     }
 }
 
@@ -757,7 +766,7 @@ BOTÓN FLOTANTE DE WHATSAPP
     /* Botón flotante de WhatsApp */
     position: fixed;
     bottom: 2rem;
-    right: 2rem;
+    right: -24rem;
     width: 60px;
     height: 60px;
 
