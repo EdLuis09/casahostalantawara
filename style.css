@@ -307,7 +307,7 @@ MENÚ MÓVIL
     top: 100%;
     left: 0;
     width: 50%; /* 50% del ancho como se pidió */
-    height: 100dvh;
+    height: 80dvh;
     background: #FF8C42; /* Fondo naranja */
     z-index: 999;
     padding: 1rem 0.5rem;
@@ -760,7 +760,7 @@ BOTÓN FLOTANTE DE WHATSAPP
     right: 2rem;
     width: 60px;
     height: 60px;
-    
+
     /* Estilos del botón */
     background: #25D366; /* Color oficial de WhatsApp */
     border-radius: 50%;
@@ -941,7 +941,7 @@ RESPONSIVE BREAKPOINTS
         width: 55px;
         height: 55px;
         bottom: 1.5rem;
-        right: 1.5rem;
+        right: -20rem;
     }
     
     .whatsapp-tooltip {
@@ -980,6 +980,7 @@ RESPONSIVE BREAKPOINTS
     .whatsapp-float {
         width: 65px;
         height: 65px;
+        right: -50rem;
     }
     
     .whatsapp-icon {
@@ -1011,7 +1012,7 @@ RESPONSIVE BREAKPOINTS
         width: 70px;
         height: 70px;
         bottom: 2.5rem;
-        right: 2.5rem;
+        right: -75rem;
     }
     
     .whatsapp-icon {
@@ -1032,7 +1033,7 @@ RESPONSIVE BREAKPOINTS
     
     .whatsapp-float {
         bottom: 3rem;
-        right: 3rem;
+        right: -85rem;
     }
 }
 
