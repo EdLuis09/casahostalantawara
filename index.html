@@ -4,232 +4,155 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casa Hostal Antawara</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@300;400;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="module1.css">
 </head>
 <body>
-    <!-- HEADER PRINCIPAL -->
+    <!-- ============ HEADER ============ -->
     <header class="header">
-        <div class="header-container">
-            
-            <!-- Switch de idiomas (Móvil: izquierda, Desktop: derecha) -->
-            <div class="language-switch">
-                <button class="lang-current" id="langCurrent">
-                    <img src="https://cdn-icons-png.flaticon.com/128/16022/16022729.png" alt="Español" class="flag-icon">
-                    <span class="lang-text">ES</span>
-                    <svg class="arrow-down" width="12" height="8" viewBox="0 0 12 8">
-                        <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
-                    </svg>
-                </button>
-                
-                <!-- Dropdown de idiomas -->
-                <div class="lang-dropdown" id="langDropdown">
-                    <button class="lang-option" data-lang="en">
-                        <img src="https://cdn-icons-png.flaticon.com/128/14539/14539032.png" alt="English" class="flag-icon">
-                        <span class="lang-text">EN</span>
-                    </button>
+        <nav class="nav-container">
+            <!-- Language Switch -->
+            <div class="language-switch" onclick="toggleLanguageDropdown()">
+                <span class="flag es"></span>
+                <span>ES</span>
+                <div class="language-dropdown" id="languageDropdown">
+                    <a href="#" onclick="changeLanguage('en')">
+                        <span class="flag en"></span>
+                        <span>EN</span>
+                    </a>
                 </div>
             </div>
 
-            <!-- Logo (Móvil: centrado, Desktop: izquierda) -->
-            <div class="logo">
-                <img src="assets/logo/Logo.png" alt="Casa Hostal Antawara" class="logo-img">
-            </div>
+            <!-- Logo -->
+            <a href="#" class="logo"></a>
 
-            <!-- Menú Desktop (Solo visible en desktop) -->
-            <nav class="nav-desktop">
-                <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="#inicio" class="nav-link">Inicio</a>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#nosotros" class="nav-link">Quiénes somos</a>
-                        <ul class="submenu">
-                            <li><a href="#por-que" class="submenu-link">Por qué elegirnos</a></li>
-                            <li><a href="#actividades" class="submenu-link">Qué actividades hacer</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#habitaciones" class="nav-link">Habitaciones</a>
-                        <ul class="submenu">
-                            <li><a href="#girasol" class="submenu-link">Girasol</a></li>
-                            <li><a href="#cayena" class="submenu-link">Cayena</a></li>
-                            <li><a href="#heliconia" class="submenu-link">Heliconia</a></li>
-                            <li><a href="#orquidea" class="submenu-link">Orquídea</a></li>
-                            <li><a href="#ave" class="submenu-link">Ave del Paraíso</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#experiencias" class="nav-link">Experiencias</a>
-                        <ul class="submenu">
-                            <li><a href="#servicios" class="submenu-link">Servicios</a></li>
-                            <li><a href="#tours" class="submenu-link">Tours</a></li>
-                            <li><a href="#lugares" class="submenu-link">Lugares</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#galeria" class="nav-link">Galería</a>
-                        <ul class="submenu">
-                            <li><a href="#resenas" class="submenu-link">Reseñas</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#ubicacion" class="nav-link">Ubicación</a>
-                        <ul class="submenu">
-                            <li><a href="#como-llegar" class="submenu-link">Cómo llegar</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#footer" class="nav-link">Contacto</a>
-                    </li>
-                </ul>
-            </nav>
-
-            <!-- Botón toggle menú móvil (Móvil: derecha) -->
-            <button class="menu-toggle" id="menuToggle">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-        </div>
-
-        <!-- Menú móvil (50% del ancho de pantalla desde la izquierda) -->
-        <nav class="nav-mobile" id="navMobile">
-            <!-- Botón cerrar -->
-            <button class="close-menu" id="closeMenu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
-                </svg>
-            </button>
-            
-            <ul class="nav-mobile-list">
-                <li class="nav-mobile-item">
-                    <a href="#inicio" class="nav-mobile-link">Inicio</a>
+            <!-- Desktop Navigation Menu -->
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li>
+                    <a href="#nosotros">Nosotros</a>
+                    <div class="dropdown">
+                        <a href="#porque-elegirnos">Por qué elegirnos</a>
+                        <a href="#actividades">Qué actividades hacer</a>
+                    </div>
                 </li>
-                
-                <li class="nav-mobile-item has-accordion">
-                    <button class="nav-mobile-button">
-                        <span>Quiénes somos</span>
-                        <svg class="accordion-arrow" width="12" height="8" viewBox="0 0 12 8">
-                            <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                    </button>
-                    <ul class="accordion-content">
-                        <li><a href="#por-que" class="accordion-link">Por qué elegirnos</a></li>
-                        <li><a href="#actividades" class="accordion-link">Qué actividades hacer</a></li>
-                    </ul>
+                <li>
+                    <a href="#habitaciones">Habitaciones</a>
+                    <div class="dropdown">
+                        <a href="#girasol">Girasol</a>
+                        <a href="#cayena">Cayena</a>
+                        <a href="#heliconia">Heliconia</a>
+                        <a href="#orquidea">Orquídea</a>
+                        <a href="#ave-paraiso">Ave del Paraíso</a>
+                    </div>
                 </li>
-                
-                <li class="nav-mobile-item has-accordion">
-                    <button class="nav-mobile-button">
-                        <span>Habitaciones</span>
-                        <svg class="accordion-arrow" width="12" height="8" viewBox="0 0 12 8">
-                            <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                    </button>
-                    <ul class="accordion-content">
-                        <li><a href="#girasol" class="accordion-link">Girasol</a></li>
-                        <li><a href="#cayena" class="accordion-link">Cayena</a></li>
-                        <li><a href="#heliconia" class="accordion-link">Heliconia</a></li>
-                        <li><a href="#orquidea" class="accordion-link">Orquídea</a></li>
-                        <li><a href="#ave" class="accordion-link">Ave del Paraíso</a></li>
-                    </ul>
+                <li>
+                    <a href="#experiencias">Experiencias</a>
+                    <div class="dropdown">
+                        <a href="#servicios">Servicios</a>
+                        <a href="#tours">Tours</a>
+                        <a href="#lugares">Lugares</a>
+                    </div>
                 </li>
-                
-                <li class="nav-mobile-item has-accordion">
-                    <button class="nav-mobile-button">
-                        <span>Experiencias</span>
-                        <svg class="accordion-arrow" width="12" height="8" viewBox="0 0 12 8">
-                            <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                    </button>
-                    <ul class="accordion-content">
-                        <li><a href="#servicios" class="accordion-link">Servicios</a></li>
-                        <li><a href="#tours" class="accordion-link">Tours</a></li>
-                        <li><a href="#lugares" class="accordion-link">Lugares</a></li>
-                    </ul>
+                <li>
+                    <a href="#galeria">Galería</a>
+                    <div class="dropdown">
+                        <a href="#resenas">Reseñas</a>
+                    </div>
                 </li>
-                
-                <li class="nav-mobile-item has-accordion">
-                    <button class="nav-mobile-button">
-                        <span>Galería</span>
-                        <svg class="accordion-arrow" width="12" height="8" viewBox="0 0 12 8">
-                            <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                    </button>
-                    <ul class="accordion-content">
-                        <li><a href="#resenas" class="accordion-link">Reseñas</a></li>
-                    </ul>
+                <li>
+                    <a href="#ubicacion">Ubicación</a>
+                    <div class="dropdown">
+                        <a href="#como-llegar">Cómo Llegar</a>
+                    </div>
                 </li>
-                
-                <li class="nav-mobile-item has-accordion">
-                    <button class="nav-mobile-button">
-                        <span>Ubicación</span>
-                        <svg class="accordion-arrow" width="12" height="8" viewBox="0 0 12 8">
-                            <path d="M1 1l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/>
-                        </svg>
-                    </button>
-                    <ul class="accordion-content">
-                        <li><a href="#como-llegar" class="accordion-link">Cómo llegar</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-mobile-item">
-                    <a href="#footer" class="nav-mobile-link">Contacto</a>
-                </li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero" id="hero">
-        <!-- Overlay para oscurecer la imagen de fondo -->
-        <div class="hero-overlay"></div>
-        
-        <!-- Contenido principal del Hero -->
-        <div class="hero-container">
-            <div class="hero-content">
-                <!-- Título principal -->
-                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
-                    Bienvenidos a Casa Hostal Antawara
-                </h1>
-                
-                <!-- Eslogan -->
-                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400">
-                    Donde la aventura empieza con un buen descanso
-                </p>
-                
-                <!-- Botón CTA -->
-                <a href="#habitaciones" class="hero-cta-btn" data-aos="zoom-in" data-aos-delay="600">
-                    <span class="btn-text">Ver Habitaciones</span>
-                    <svg class="btn-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
-                        <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+    <!-- ============ MOBILE MENU OVERLAY ============ -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- ============ MOBILE MENU ============ -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" onclick="closeMobileMenu()">×</button>
+        <ul>
+            <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+            <li>
+                <a href="#nosotros" onclick="toggleSubmenu(this)">
+                    Nosotros
+                    <span class="submenu-toggle">▼</span>
                 </a>
-            </div>
-        </div>
-        
-        <!-- Indicador de scroll hacia abajo -->
-        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="800">
-            <div class="scroll-mouse">
-                <div class="scroll-wheel"></div>
-            </div>
-            <span class="scroll-text">Scroll</span>
+                <div class="mobile-submenu">
+                    <a href="#porque-elegirnos" onclick="closeMobileMenu()">Por qué elegirnos</a>
+                    <a href="#actividades" onclick="closeMobileMenu()">Qué actividades hacer</a>
+                </div>
+            </li>
+            <li>
+                <a href="#habitaciones" onclick="toggleSubmenu(this)">
+                    Habitaciones
+                    <span class="submenu-toggle">▼</span>
+                </a>
+                <div class="mobile-submenu">
+                    <a href="#girasol" onclick="closeMobileMenu()">Girasol</a>
+                    <a href="#cayena" onclick="closeMobileMenu()">Cayena</a>
+                    <a href="#heliconia" onclick="closeMobileMenu()">Heliconia</a>
+                    <a href="#orquidea" onclick="closeMobileMenu()">Orquídea</a>
+                    <a href="#ave-paraiso" onclick="closeMobileMenu()">Ave del Paraíso</a>
+                </div>
+            </li>
+            <li>
+                <a href="#experiencias" onclick="toggleSubmenu(this)">
+                    Experiencias
+                    <span class="submenu-toggle">▼</span>
+                </a>
+                <div class="mobile-submenu">
+                    <a href="#servicios" onclick="closeMobileMenu()">Servicios</a>
+                    <a href="#tours" onclick="closeMobileMenu()">Tours</a>
+                    <a href="#lugares" onclick="closeMobileMenu()">Lugares</a>
+                </div>
+            </li>
+            <li>
+                <a href="#galeria" onclick="toggleSubmenu(this)">
+                    Galería
+                    <span class="submenu-toggle">▼</span>
+                </a>
+                <div class="mobile-submenu">
+                    <a href="#resenas" onclick="closeMobileMenu()">Reseñas</a>
+                </div>
+            </li>
+            <li>
+                <a href="#ubicacion" onclick="toggleSubmenu(this)">
+                    Ubicación
+                    <span class="submenu-toggle">▼</span>
+                </a>
+                <div class="mobile-submenu">
+                    <a href="#como-llegar" onclick="closeMobileMenu()">Cómo Llegar</a>
+                </div>
+            </li>
+            <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Bienvenidos a Casa Hostal Antawara</h1>
+            <p class="subtitle">Donde la aventura empieza con un buen descanso</p>
+            <a href="#habitaciones" class="cta-button">Ver Habitaciones</a>
         </div>
     </section>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/1234567890?text=Hola,%20me%20interesa%20información%20sobre%20Casa%20Hostal%20Antawara" 
-        class="whatsapp-float" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        data-aos="zoom-in" 
-        data-aos-delay="1000">
-        <svg class="whatsapp-icon" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
-        </svg>
-        <div class="whatsapp-tooltip">¡Contáctanos!</div>
-    </a>
-
-    <script src="script.js"></script>
+    <!-- ============ WHATSAPP FLOATING BUTTON ============ -->
+    <a href="https://wa.me/+573187520630" class="whatsapp-float" target="_blank" rel="noopener noreferrer"></a>
+<script src="module1.js"></script>
 </body>
 </html>
