@@ -130,16 +130,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const currentScroll = window.pageYOffset;
     
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
+    if (currentScroll > lastScrollTop && currentScroll > 100) {
         // Scrolling down
-        header.style.transform = 'translateY(-100%)';
+        header.classList.add('scroll-down');
     } else {
         // Scrolling up
-        header.style.transform = 'translateY(0)';
+        header.classList.remove('scroll-down');
     }
-    lastScrollTop = scrollTop;
+    
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 
 // ============ CLOSE MOBILE MENU ON RESIZE ============

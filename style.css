@@ -278,6 +278,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header.scroll-down .mobile-menu-close {
+    opacity: 0;
+    visibility: hidden;
 }
 
 
@@ -868,5 +876,22 @@ body {
 @media (min-width: 1200px) {
     .hero-content h1 {
         font-size: 4.5rem;
+    }
+}
+
+/* Actualiza los estilos del header para desktop */
+@media (min-width: 1024px) {
+    .header {
+        padding: 1rem 0; /* Aumentamos el padding vertical */
+    }
+
+    .nav-container {
+        max-width: 1400px;
+        padding: 0 4rem; /* Aumentamos el padding horizontal */
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
     }
 }
